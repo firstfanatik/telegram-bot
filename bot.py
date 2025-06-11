@@ -53,7 +53,21 @@ def main():
 
     print("🤖 Бот запущен. Мовчить у групі, але реагує на кнопки.")
     app.run_polling()
+import asyncio
+from aiohttp import web
+
+async def handle(request):
+    return web.Response(text="Bot is running")
+
+async def run_server():
+    app = web.Application()
+    app.router.add_get("/", handle)
+    runner = web.AppRunner(app)
+    await runner.setup()
+    site = web.TCPSite(runner, port=10000)
+    await site.start()
 
 if __name__ == '__main__':
+    asyncio.get_event_loop().create_task(run_server())  # ← фоновый веб-сервер
     main()
 
