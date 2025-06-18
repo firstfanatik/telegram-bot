@@ -5,7 +5,7 @@ from telegram.ext import Application, CallbackQueryHandler, MessageHandler, filt
 from aiohttp import web
 
 # Переменные из окружения
-TOKEN = os.getenv("BOT_TOKEN")
+TOKEN = "123456789:ABCDefGhIjKlmNoPQRstuVWxyzEXAMPLE"
 GROUP_CHAT_ID = int(os.getenv("GROUP_CHAT_ID", "-1002203558146"))
 
 # Клавиатура
