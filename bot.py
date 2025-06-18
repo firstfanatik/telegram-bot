@@ -10,7 +10,7 @@ GROUP_CHAT_ID = int(os.getenv("GROUP_CHAT_ID", "-1002203558146"))
 
 # Клавиатура
 keyboard = InlineKeyboardMarkup([
-    [InlineKeyboardButton("📩 Потрібна допомога", callback_data="help")],
+    [InlineKeyboardButton("📩 Потрібна допомога @Vladosss991 @vikTyzz @Milajust @Bereshchenko13 ", callback_data="help")],
     [InlineKeyboardButton("🙏 Подякувати", callback_data="thanks")]
 ])
 
